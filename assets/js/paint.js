@@ -29,11 +29,11 @@ function removeOpacity(event) {
     event.preventDefault();    
 }
 
-function getProductInfo(paintColor) {
+function getProductInfo(partNumber) {
     let price;
     let colorName;  
     
-    switch (paintColor) {
+    switch (partNumber) {
         case 'pn1': 
             price = '$14.99'
             colorName = 'Lime Green'
@@ -73,13 +73,11 @@ function getProductInfo(paintColor) {
             price = '$21.98'
             colorName = 'Solid White'
             updatePrice(colorName, price)
- 
             break;   
         case 'pn9':
             price = '$14.99'
             colorName = 'Solid Yellow'
             updatePrice(colorName, price)
- 
             break;   
           default:              
     }
