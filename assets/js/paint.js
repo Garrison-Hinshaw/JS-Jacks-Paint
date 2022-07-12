@@ -9,11 +9,16 @@ function configureListeners() {
 }
 
 function addOpacity(event) {
-    // add appropriate CSS class
+    if (this.classList.contains('dim')){
+        this.classList.add('dim');
+    }// add appropriate CSS class
     getProductInfo(event.target.id);     
 }
 
 function removeOpacity(event) {
+    if (this.classList.contains('dim')){
+        this.classList.remove('dim');
+    }
      //remove appropriate CSS class
 
     let element = document.getElementById('color-price');
