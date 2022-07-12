@@ -3,7 +3,8 @@ function configureListeners() {
 
 
      for (var i = 0; i < images.length; i++) {        
-        // iterate over images and add mouseover event listeners      
+        document.getElementById(images[i].id).addEventListener('mouseover')// iterate over images and add mouseover event listeners
+        document.getElementById(images[i].id).addEventListener('mouseover')      
     } 
 }
 
