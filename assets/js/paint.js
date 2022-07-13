@@ -4,13 +4,13 @@ function configureListeners() {
 
      for (var i = 0; i < images.length; i++) {        
         document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)
-        document.getElementById(images[i].id).addEventListener('mouseover', removeOpacity, false)      
+        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)      
     } 
 }
 
 function addOpacity(event) {
     if (!this.classList.contains('dim')){
-        this.classList.add('dim');
+        this.classList.add('dim')
     }
     getProductInfo(event.target.id);     
 }
@@ -84,11 +84,11 @@ function getProductInfo(partNumber) {
 
     function updatePrice(colorName, price)
     {       
-        let colorPrice = document.getElementById('color-price')
+        let colorPrice = document.getElementById('color-price');
         colorPrice.textcontent = price;
 
         
-        let color = document.getElementById('color-name')
+        let color = document.getElementById('color-name');
         color.textcontent = colorName;
     }
 }
